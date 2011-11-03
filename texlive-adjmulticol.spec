@@ -1,3 +1,9 @@
+# revision 21512
+# category Package
+# catalog-ctan /macros/latex/contrib/adjmulticol
+# catalog-date 2011-02-24 09:45:27 +0100
+# catalog-license lppl1.3
+# catalog-version 1.0
 Name:		texlive-adjmulticol
 Version:	1.0
 Release:	1
@@ -49,6 +55,7 @@ two side printing.
 #- source
 %doc %{_texmfdistdir}/source/latex/adjmulticol/adjmulticol.dtx
 %doc %{_texmfdistdir}/source/latex/adjmulticol/adjmulticol.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -59,3 +66,5 @@ two side printing.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
