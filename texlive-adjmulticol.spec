@@ -1,12 +1,12 @@
-# revision 21512
+# revision 28936
 # category Package
 # catalog-ctan /macros/latex/contrib/adjmulticol
-# catalog-date 2011-02-24 09:45:27 +0100
+# catalog-date 2013-01-24 12:03:40 +0100
 # catalog-license lppl1.3
-# catalog-version 1.0
+# catalog-version 1.1
 Name:		texlive-adjmulticol
-Version:	1.0
-Release:	2
+Version:	1.1
+Release:	1
 Summary:	Adjusting margins for multicolumn and single column output
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/adjmulticol
@@ -55,18 +55,3 @@ two side printing.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 749087
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 717795
-- texlive-adjmulticol
-- texlive-adjmulticol
-- texlive-adjmulticol
-- texlive-adjmulticol
-- texlive-adjmulticol
-
