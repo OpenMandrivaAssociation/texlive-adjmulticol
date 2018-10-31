@@ -6,7 +6,7 @@
 # catalog-version 1.1
 Name:		texlive-adjmulticol
 Version:	1.1
-Release:	9
+Release:	10
 Summary:	Adjusting margins for multicolumn and single column output
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/adjmulticol
