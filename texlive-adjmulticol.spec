@@ -5,9 +5,9 @@ Summary:	Adjusting margins for multicolumn and single column output
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/adjmulticol
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.r63320.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.doc.r63320.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.source.r63320.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
