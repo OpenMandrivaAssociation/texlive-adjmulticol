@@ -1,19 +1,13 @@
-# revision 28936
-# category Package
-# catalog-ctan /macros/latex/contrib/adjmulticol
-# catalog-date 2013-01-24 12:03:40 +0100
-# catalog-license lppl1.3
-# catalog-version 1.1
 Name:		texlive-adjmulticol
-Version:	1.1
-Release:	10
+Version:	63320
+Release:	1
 Summary:	Adjusting margins for multicolumn and single column output
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/adjmulticol
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.r63320.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.doc.r63320.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.source.r63320.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ understands the difference between the even and odd margins for
 two side printing.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -48,7 +42,8 @@ two side printing.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
