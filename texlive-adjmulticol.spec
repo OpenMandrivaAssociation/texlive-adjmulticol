@@ -29,16 +29,10 @@ fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/adjmulticol/adjmulticol.sty
-%doc %{_texmfdistdir}/doc/latex/adjmulticol/Makefile
-%doc %{_texmfdistdir}/doc/latex/adjmulticol/README
-%doc %{_texmfdistdir}/doc/latex/adjmulticol/adjmulticol.bib
-%doc %{_texmfdistdir}/doc/latex/adjmulticol/adjmulticol.pdf
-%doc %{_texmfdistdir}/doc/latex/adjmulticol/sample.pdf
-%doc %{_texmfdistdir}/doc/latex/adjmulticol/sample.tex
+%{_texmfdistdir}/tex/latex/adjmulticol
+%doc %{_texmfdistdir}/doc/latex/adjmulticol
 #- source
-%doc %{_texmfdistdir}/source/latex/adjmulticol/adjmulticol.dtx
-%doc %{_texmfdistdir}/source/latex/adjmulticol/adjmulticol.ins
+%doc %{_texmfdistdir}/source/latex/adjmulticol
 
 #-----------------------------------------------------------------------
 %prep
