@@ -3,7 +3,7 @@ Version:	63320
 Release:	2
 Summary:	Adjusting margins for multicolumn and single column output
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/adjmulticol
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/adjmulticol
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.doc.r%{version}.tar.xz
