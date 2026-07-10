@@ -1,46 +1,25 @@
-Name:		texlive-adjmulticol
-Version:	63320
-Release:	2
+%global tl_name adjmulticol
+%global tl_revision 77682
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.5
+Release:	%{tl_revision}.1
 Summary:	Adjusting margins for multicolumn and single column output
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/adjmulticol
-License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.source.r%{version}.tar.xz
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/adjmulticol.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-package extends the multicol package with the option to change
-the margins for multicolumn and unicolumn layout. The package
-understands the difference between the even and odd margins for
-two side printing.
+The package adds, to the multicol package, the option to change the
+margins for multicolumn and unicolumn layout. The package understands
+the difference between the even and odd margins for two side printing.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/adjmulticol
-%doc %{_texmfdistdir}/doc/latex/adjmulticol
-#- source
-%doc %{_texmfdistdir}/source/latex/adjmulticol
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
